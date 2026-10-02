@@ -1,0 +1,335 @@
+/* ════════════════════════════════
+   DESTACADOS
+════════════════════════════════ */
+
+.destacados {
+  background: var(--color-fondo);
+  padding: 2rem 0;
+}
+
+/* ───────── Encabezado ───────── */
+
+.destacados__encabezado {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.destacados__divisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.destacados__linea {
+  width: 50px;
+  height: 1px;
+  background: var(--color-primario);
+  opacity: 0.5;
+}
+
+.destacados__icono {
+  font-size: 0.65rem;
+  color: var(--color-primario);
+}
+
+.destacados__titulo,
+.experiencia__titulo,
+.testimonios__comentario {
+  text-wrap: balance;
+}
+
+.destacados__titulo {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--color-oscuro);
+  margin-bottom: 0.4rem;
+}
+
+.destacados__subtitulo {
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: var(--fuente-cuerpo);
+  letter-spacing: 0.05em;
+  color: var(--color-medio);
+}
+
+/* ───────── Slider ───────── */
+
+.destacados__slider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.destacados__ventana {
+  flex: 1;
+  overflow: hidden;
+}
+
+.destacados__pista {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.destacados__celda {
+  flex: 0 0 25%;
+  padding-inline: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* ───────── Flechas ───────── */
+
+.destacados__flecha {
+  width: 32px;
+  aspect-ratio: 1;
+  border: 1px solid var(--color-suave);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-suave);
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  opacity: 0.5;
+  transition:
+    opacity 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.destacados__flecha:hover {
+  opacity: 1;
+  border-color: var(--color-primario);
+  color: var(--color-primario);
+}
+
+/* ───────── Tarjeta ───────── */
+
+.tarjeta-destacado {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--color-marfil);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+
+  box-shadow: 0 10px 30px var(--color-sombra);
+
+  transition:
+    transform 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tarjeta-destacado:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px var(--color-sombra);
+}
+
+/* ───────── Imagen ───────── */
+
+.tarjeta-destacado__imagen-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.tarjeta-destacado__imagen,
+.tarjeta-destacado__placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.tarjeta-destacado__imagen {
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.15, 0, 0.15, 1);
+}
+
+.tarjeta-destacado:hover .tarjeta-destacado__imagen {
+  transform: scale(1.08);
+}
+
+.tarjeta-destacado__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 7, 3, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.tarjeta-destacado:hover .tarjeta-destacado__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tarjeta-destacado__overlay-body {
+  text-align: center;
+  color: var(--color-blanco);
+  display: grid;
+  gap: 1rem;
+  max-width: 260px;
+  justify-items: center;
+}
+
+.tarjeta-destacado__overlay-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.tarjeta-destacado__overlay-boton {
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background: var(--color-blanco);
+  color: var(--color-primario);
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+  width: 90%;
+}
+
+.tarjeta-destacado__overlay-boton:hover {
+  transform: scale(1.05);
+}
+
+/* ───────── Placeholder ───────── */
+
+.tarjeta-destacado__placeholder {
+  display: grid;
+  place-items: center;
+  gap: 0.4rem;
+
+  min-height: 180px;
+  background: var(--color-suave);
+  opacity: 0.4;
+  text-align: center;
+}
+
+.tarjeta-destacado__placeholder-icono {
+  font-size: 2.5rem;
+}
+
+.tarjeta-destacado__placeholder-texto {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: var(--fuente-cuerpo);
+  color: var(--color-oscuro);
+}
+
+/* ───────── Categoría ───────── */
+
+.tarjeta-destacado__categoria {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  padding: 5px 12px;
+  border-radius: 20px;
+
+  background: var(--color-primario);
+  color: var(--color-marfil);
+
+  font-weight: 700;
+  font-size: 0.6rem;
+  font-family: var(--fuente-cuerpo);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  box-shadow: 0 4px 10px var(--color-sombra);
+  backdrop-filter: blur(4px);
+}
+
+/* ───────── Cuerpo ───────── */
+
+.tarjeta-destacado__cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  padding: 1.5rem;
+}
+
+.tarjeta-destacado__nombre {
+  margin-bottom: 0.7rem;
+
+  font-family: var(--fuente-titulos);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  color: var(--color-oscuro);
+}
+
+.tarjeta-destacado__descripcion {
+  flex: 1;
+  margin-bottom: 1.5rem;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: var(--fuente-cuerpo);
+  color: var(--color-medio);
+}
+
+/* ───────── Pie ───────── */
+
+.tarjeta-destacado__pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.tarjeta-destacado__precio {
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--fuente-titulos);
+  color: var(--color-primario);
+}
+
+.tarjeta-destacado__link-texto {
+  margin-right: 5px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  opacity: 0;
+  transform: translateX(-10px);
+
+  transition: all 0.3s ease;
+}
+
+/* ───────── Responsive ───────── */
+
+@media (max-width: 1024px) {
+  .destacados__celda {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .destacados__celda {
+    flex-basis: 100%;
+  }
+
+  .destacados__flecha {
+    display: none;
+  }
+}

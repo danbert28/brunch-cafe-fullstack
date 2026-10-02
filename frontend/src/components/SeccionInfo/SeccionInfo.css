@@ -1,0 +1,10 @@
+.seccion-info {
+  background-color: var(--color-fondo);
+  padding: 3rem 0;
+}
+
+@media screen and (max-width: 640px) {
+  .seccion-info {
+    padding: 2rem 0;
+  }
+}

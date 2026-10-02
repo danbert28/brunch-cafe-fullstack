@@ -1,0 +1,329 @@
+/* =========================
+   NAVBAR BASE (Escritorio)
+========================= */
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  width: auto;
+  box-sizing: border-box;
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+
+  background: rgba(247, 231, 226, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  transition:
+    transform 0.5s cubic-bezier(.22,1,.36,1),
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.top-bar--oculta {
+  transform: translateY(-100%);
+}
+
+/* =========================
+   TRANSPARENTE
+========================= */
+
+.top-bar--transparente {
+  position: absolute;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* Estado Desplegado: Cambia a tu variable de fondo oscuro y se adapta al alto del contenido */
+.top-bar--abierto {
+  position: sticky !important; 
+  height: auto !important;
+  background: var(--color-oscuro) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transform: translateY(0) !important;
+}
+
+/* =========================
+   LAYOUT & FOUNDATION RESET
+========================= */
+
+.top-bar-left,
+.top-bar-right,
+.menu,
+.menu li,
+.menu li a {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.top-bar-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar__logo-enlace {
+  display: flex;
+  align-items: center;
+  border-bottom: none !important;
+}
+
+.navbar__logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  width: auto;
+  max-height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   LINKS (Escritorio)
+========================= */
+
+.access {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: var(--color-oscuro);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.25s ease, border-color 0.25s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.access:hover,
+.menu .active {
+  color: var(--color-suave);
+}
+
+.menu .active {
+  border-bottom-color: var(--color-suave);
+}
+
+.top-bar--transparente .access {
+  color: var(--color-marfil);
+}
+
+.top-bar--transparente .access:hover,
+.top-bar--transparente .menu .active {
+  color: var(--color-suave);
+}
+
+.top-bar--transparente .menu .active {
+  border-bottom-color: var(--color-suave);
+}
+
+/* =========================
+   CARRITO DE COMPRAS
+========================= */
+
+.navbar__carrito {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-carrito {
+  width: 24px;
+  height: 24px;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.top-bar--transparente .icon-carrito {
+  filter: brightness(0) invert(1);
+}
+
+.navbar__carrito--animando {
+  animation: rebote 0.6s ease;
+}
+
+@keyframes rebote {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.3) rotate(-10deg); }
+  50%  { transform: scale(0.9) rotate(5deg); }
+  75%  { transform: scale(1.15) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.navbar__carrito-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--color-medio);
+  color: var(--color-marfil);
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 105;
+}
+
+.navbar__hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-oscuro);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.top-bar--transparente .navbar__hamburger span {
+  background-color: var(--color-marfil);
+}
+
+/* Transformación a "X" manteniendo alineación izquierda */
+.navbar__hamburger--activo span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: var(--color-marfil) !important;
+}
+
+.navbar__hamburger--activo span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__hamburger--activo span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: var(--color-marfil) !important;
+}
+
+
+/* =========================
+   RESPONSIVE (Alineaciones Corregidas)
+========================= */
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 0 1rem;
+    height: 75px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  /* Hamburguesa visible y alineada a la izquierda */
+  .navbar__hamburger {
+    display: flex;
+    order: 1;
+  }
+
+  /* El logo se centra perfectamente en la barra mientras esté cerrado */
+  .top-bar-left {
+    position: absolute;
+    left: 50%;
+    top: 37.5px; /* Centrado vertical respecto a los 75px de la barra */
+    transform: translate(-50%, -50%);
+    height: auto;
+    z-index: 101;
+  }
+
+  .navbar__logo-wrapper {
+    width: 100px;
+    height: 50px;
+  }
+
+  /* Contenedor del menú toma todo el ancho de la fila inferior */
+  .top-bar-right {
+    width: 100%;
+    height: auto;
+    display: none;
+    order: 3;
+    padding-bottom: 1.5rem;
+  }
+
+  .top-bar-right--abierto {
+    display: flex;
+  }
+
+  /* Tu configuración original de menú móvil */
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem; 
+    width: 100%;
+    padding: 1rem 0 0 0;
+    align-items: center;
+  }
+
+  .menu li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Tu tipografía original intacta (0.85rem) + Contraste Marfil */
+  .access {
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    color: var(--color-marfil) !important;
+    padding: 0.4rem 0;
+    border-bottom: 2px solid transparent;
+  }
+
+  .access:hover,
+  .menu .active {
+    color: var(--color-suave) !important;
+    border-bottom-color: var(--color-suave) !important;
+  }
+
+  .menu__item-carrito {
+    margin-top: 0.5rem;
+  }
+
+  .menu__item-carrito .icon-carrito {
+    filter: brightness(0) invert(1) !important;
+  }
+}

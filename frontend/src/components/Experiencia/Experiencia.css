@@ -1,0 +1,148 @@
+/* ════════════════════════════════
+   EXPERIENCIA
+════════════════════════════════ */
+
+.experiencia-wrap {
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.experiencia {
+  flex: 1;
+  padding: 2.5rem;
+
+  background: var(--color-marfil);
+}
+
+/* ───────── Imagen ───────── */
+
+.experiencia__imagen-wrap {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.experiencia__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70%;
+
+  filter: grayscale(0.3) brightness(0.9);
+  transition: filter 1.5s ease;
+}
+
+.visible .experiencia__imagen {
+  filter: grayscale(0) brightness(1);
+}
+
+.experiencia__degradado {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    var(--color-marfil) 0%,
+    transparent 50%
+  );
+}
+
+/* ───────── Divisor ───────── */
+
+.experiencia__divisor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 0.8rem;
+}
+
+.experiencia__linea {
+  width: 40px;
+  height: 1px;
+
+  background: var(--color-primario);
+  opacity: 0.5;
+}
+
+.experiencia__icono-divisor {
+  font-size: 0.65rem;
+  color: var(--color-primario);
+}
+
+/* ───────── Título ───────── */
+
+.experiencia__titulo {
+  margin-bottom: 1.8rem;
+
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  color: var(--color-oscuro);
+}
+
+/* ───────── Lista ───────── */
+
+.experiencia__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experiencia__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.experiencia__icono {
+  flex-shrink: 0;
+
+  width: 36px;
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 0.5rem;
+
+  font-size: 2rem;
+  color: var(--color-oscuro);
+}
+
+.experiencia__item-titulo {
+  display: block;
+  margin-bottom: 0.2rem;
+
+  font-size: 0.95rem;
+  font-family: var(--fuente-titulos);
+  color: var(--color-oscuro);
+}
+
+.experiencia__item-descripcion {
+  margin: 0;
+
+  font-size: 0.88rem;
+  line-height: 1.55;
+  font-family: var(--fuente-cuerpo);
+  color: var(--color-medio);
+}
+
+/* ───────── Responsive ───────── */
+
+@media (max-width: 768px) {
+  .experiencia__imagen-wrap {
+    display: none;
+  }
+}

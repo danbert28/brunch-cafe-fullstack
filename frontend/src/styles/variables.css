@@ -1,0 +1,20 @@
+:root {
+    /* Paleta principal */
+    --color-fondo: #F7E7E2;        
+    --color-suave: #DA9F93;        
+    --color-medio: #B6465F;        
+    --color-primario: #890620;    
+    --color-oscuro: #2C0703; 
+    --color-marfil: #F5EFE6;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-sombra: #0000000a;
+
+    --fuente-titulos: 'Cormorant Garamond', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+    --fuente-acentos: 'Great Vibes', cursive;
+
+}
+html {
+  scrollbar-gutter: stable;
+}

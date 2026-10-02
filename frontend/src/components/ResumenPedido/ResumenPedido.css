@@ -1,0 +1,217 @@
+.resumen-pedido-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 7, 3, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.resumen-pedido-modal {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 520px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(44, 7, 3, 0.3);
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado */
+.resumen-pedido__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-suave);
+}
+
+.resumen-pedido__header-icono {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.resumen-pedido__header-titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    color: var(--color-oscuro);
+    margin-bottom: 0.3rem;
+}
+
+.resumen-pedido__header-subtitulo {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Secciones */
+.resumen-pedido__seccion {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-fondo);
+}
+
+.resumen-pedido__seccion-titulo {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+/* Productos */
+.resumen-pedido__producto {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--color-fondo);
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+}
+
+.resumen-pedido__producto-imagen {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.resumen-pedido__producto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.resumen-pedido__producto-nombre {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-oscuro);
+}
+
+.resumen-pedido__producto-cantidad {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.resumen-pedido__producto-subtotal {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+/* Datos domicilio */
+.resumen-pedido__dato {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--color-fondo);
+    border-radius: 8px;
+    border-left: 3px solid var(--color-primario);
+    margin-bottom: 0.6rem;
+}
+
+.resumen-pedido__dato-icono {
+    color: var(--color-primario);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.resumen-pedido__dato div {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumen-pedido__dato-label {
+    font-size: 0.7rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.resumen-pedido__dato-valor {
+    font-size: 0.9rem;
+    color: var(--color-oscuro);
+    font-weight: 500;
+}
+
+/* Total */
+.resumen-pedido__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--color-oscuro);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.resumen-pedido__total-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-fondo);
+    letter-spacing: 0.08em;
+}
+
+.resumen-pedido__total-valor {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-marfil);
+}
+
+/* Botones */
+.resumen-pedido__botones {
+    display: flex;
+    gap: 1rem;
+}
+
+.resumen-pedido__btn-editar,
+.resumen-pedido__btn-confirmar {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.resumen-pedido__btn-editar {
+    background: transparent;
+    border: 2px solid var(--color-oscuro);
+    color: var(--color-oscuro);
+}
+
+.resumen-pedido__btn-editar:hover {
+    background: var(--color-oscuro);
+    color: var(--color-marfil);
+    transform: translateY(-2px);
+}
+
+.resumen-pedido__btn-confirmar {
+    background: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    color: var(--color-marfil);
+    box-shadow: 0 4px 15px rgba(137, 6, 32, 0.3);
+}
+
+.resumen-pedido__btn-confirmar:hover {
+    background: var(--color-medio);
+    border-color: var(--color-medio);
+    transform: translateY(-2px);
+}

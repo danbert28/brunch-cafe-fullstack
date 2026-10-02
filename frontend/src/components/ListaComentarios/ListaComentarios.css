@@ -1,0 +1,136 @@
+.lista-comentarios-seccion {
+    padding: 2rem 0 4rem;
+    background-color: var(--color-fondo);
+}
+
+/* ── Divisor ── */
+.lista-comentarios__divisor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    justify-content: center;
+}
+
+.lista-comentarios__linea {
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-oscuro);
+    opacity: 0.5;
+    display: block;
+}
+
+.lista-comentarios__icono-divisor {
+    color: var(--color-oscuro);
+    font-size: 0.65rem;
+}
+
+/* ── Título ── */
+.lista-comentarios__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+    color: var(--color-oscuro);
+    margin-bottom: 0.4rem;
+    text-align: center;
+    
+}
+
+/* ── Tarjeta ── */
+.lista-comentarios__tarjeta {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(44, 7, 3, 0.08);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* ── Avatar ── */
+.lista-comentarios__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--color-primario);
+    color: var(--color-marfil);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* ── Info ── */
+.lista-comentarios__info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.lista-comentarios__nombre {
+    font-family: var(--fuente-titulos);
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+    font-weight: 600;
+}
+
+/* ── Estrellas ── */
+.lista-comentarios__estrellas {
+    display: flex;
+    gap: 2px;
+}
+
+.lista-comentarios__estrella {
+    font-size: 1rem;
+}
+
+.lista-comentarios__estrella--llena {
+    color: var(--color-primario);
+}
+
+.lista-comentarios__estrella--vacia {
+    color: var(--color-suave);
+}
+
+/* ── Comentario ── */
+.lista-comentarios__comentario {
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ── Ver más ── */
+.lista-comentarios__ver-mas {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.lista-comentarios__ver-mas .button.hollow {
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+    border-radius: 4px;
+    padding: 0.6rem 2rem;
+    font-size: 0.85rem;
+    background: transparent;
+}
+
+.lista-comentarios__ver-mas .button.hollow:hover {
+    background-color: var(--color-primario);
+    color: var(--color-marfil);
+}
+.grid-x {
+    align-items: stretch;
+    row-gap: 1.5rem;
+}
+
+
+.lista-comentarios__tarjeta {
+    height: 100%;
+}

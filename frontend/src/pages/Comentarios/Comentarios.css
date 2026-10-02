@@ -1,0 +1,83 @@
+.pagina-Comentarios {
+  padding-top: 0;
+  margin-top: 0;
+}
+.pagina-Comentarios .hero-comentarios {
+  margin-top: -64px;
+}
+.pagina-comentarios {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.mancha-comentarios {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mancha-comentarios-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-suave);
+  top: 500px;
+  right: -100px;
+  opacity: 0.5;
+}
+
+.mancha-comentarios-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-medio);
+  top: 820px;
+  left: -150px;
+  opacity: 0.4;
+}
+
+.mancha-comentarios-3 {
+  width: 450px;
+  height: 450px;
+  background: var(--color-primario);
+  top: 1200px;
+  right: -180px;
+  opacity: 0.2;
+}
+.animar {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.comentarios-hero.animar {
+  transition-delay: 0s;
+}
+
+.comentarios-formulario.animar {
+  transition-delay: 0.15s;
+}
+
+.comentarios-lista.animar {
+  transition-delay: 0.3s;
+}
+
+.animar--suave {
+  transform: translateY(20px);
+}
+
+.animar--zoom {
+  transform: scale(0.95);
+}
+
+.animar--suave.visible,
+.animar--zoom.visible {
+  transform: translateY(0) scale(1);
+}

@@ -1,0 +1,98 @@
+/* ════════════════════════════════
+   HeroReservas.css
+   ════════════════════════════════ */
+
+.hero-reservas {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  max-height: 600px;
+  overflow: hidden;
+  background: var(--color-oscuro);
+}
+
+/* ── Fondo ── */
+.hero-reservas__fondo {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-reservas__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Overlay ── */
+.hero-reservas__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(44, 7, 3, 0.75) 0%,
+    rgba(44, 7, 3, 0.35) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* ── Contenido ── */
+.hero-reservas__contenido {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 64px; /* compensa la navbar transparente */
+}
+
+.hero-reservas__texto {
+  max-width: 700px;
+}
+
+.hero-reservas__titulo {
+  font-family: var(--fuente-acentos);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-marfil);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 20px rgba(44, 7, 3, 0.5);
+}
+
+.hero-reservas__subtitulo {
+  font-family: var(--fuente-cuerpo);
+  font-size: 1rem;
+  color: var(--color-fondo);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* ── Ola decorativa ── */
+.hero-reservas__ola {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.hero-reservas__ola svg {
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 640px) {
+  .hero-reservas {
+    height: 45vh;
+  }
+}

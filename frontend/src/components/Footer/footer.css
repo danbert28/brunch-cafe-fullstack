@@ -1,0 +1,70 @@
+.container {
+    background-color: var(--color-oscuro);
+    color: var(--color-suave);
+    padding: 40px 60px 0px 60px;
+}
+
+.container h4 {
+    color: var(--color-fondo);
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-suave);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container a,
+.container a:visited,
+.container a:active {
+    color: var(--color-fondo) !important;
+}
+
+.fast-access:hover {
+    color: var(--color-suave) !important;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.footer-icons svg {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-icons a:hover,
+.footer-icons a:hover svg {
+    color: var(--color-suave) !important;
+}
+
+span {
+    color: var(--color-fondo);
+    font-size: 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 30px;
+    border-top: 1px solid var(--color-suave);
+    color: var(--color-fondo);
+    font-size: 12px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.container a:visited {
+    color: var(--color-fondo) !important;
+}

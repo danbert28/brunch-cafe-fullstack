@@ -1,0 +1,159 @@
+/* ════════════════════════════════
+   TESTIMONIOS
+════════════════════════════════ */
+
+.testimonios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 4rem 1rem;
+
+  border-radius: 12px;
+  text-align: left;
+}
+
+.testimonios-wrap {
+  width: 100%;
+}
+
+/* ───────── Divisor ───────── */
+
+.testimonios__divisor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 0.8rem;
+}
+
+.testimonios__linea {
+  width: 40px;
+  height: 1px;
+
+  background: var(--color-oscuro);
+  opacity: 0.5;
+}
+
+.testimonios__icono-divisor {
+  font-size: 0.65rem;
+  color: var(--color-oscuro);
+}
+
+/* ───────── Título ───────── */
+
+.testimonios__titulo {
+  margin-bottom: 1.5rem;
+
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  color: var(--color-oscuro);
+}
+
+/* ───────── Comentario ───────── */
+
+.testimonios__cuerpo {
+  will-change: opacity, transform;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.testimonios__cuerpo--oculto {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.testimonios__cuerpo--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonios__blockquote {
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.testimonios__comentario {
+  max-width: 480px;
+
+  margin: 1rem 0;
+
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-family: var(--fuente-cuerpo);
+  color: var(--color-oscuro);
+  font-style: normal;
+}
+
+/* ───────── Autor ───────── */
+
+.testimonios__autor {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin-top: 2rem;
+}
+
+.testimonios__nombre {
+  font-size: 0.95rem;
+  font-family: var(--fuente-titulos);
+  color: var(--color-oscuro);
+}
+
+/* ───────── Estrellas ───────── */
+
+.testimonios__estrellas {
+  display: flex;
+  gap: 2px;
+}
+
+.testimonios__estrella {
+  font-size: 1rem;
+}
+
+.testimonios__estrella--llena {
+  color: var(--color-primario);
+}
+
+.testimonios__estrella--vacia {
+  color: var(--color-suave);
+}
+
+/* ───────── Puntos ───────── */
+
+.testimonios__puntos {
+  display: flex;
+  gap: 8px;
+
+  margin-top: 1.5rem;
+}
+
+.testimonios__punto {
+  width: 8px;
+  height: 8px;
+
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+
+  background: var(--color-suave);
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    width 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.testimonios__punto--activo {
+  width: 22px;
+  border-radius: 4px;
+  background: var(--color-primario);
+}

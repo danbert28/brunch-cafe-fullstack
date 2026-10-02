@@ -1,0 +1,80 @@
+.fondo-animado {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        135deg,
+        var(--color-fondo) 0%,
+        var(--color-fondo) 50%,
+        var(--color-fondo) 100%
+    );
+    background-size: 400% 400%;
+    animation: gradiente 8s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.fondo-animado__icono {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    color: var(--color-oscuro);
+    opacity: 0.4;
+    animation: flotar 10s ease-in-out infinite;
+    user-select: none;
+    pointer-events: none;
+}
+
+.fondo-animado__icono svg {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+}
+
+@keyframes flotar {
+    0%   { transform: translateY(0px) rotate(0deg);    opacity: 0.4; }
+    50%  { transform: translateY(-30px) rotate(180deg); opacity: 0.4; }
+    100% { transform: translateY(0px) rotate(360deg);  opacity: 0.4; }
+}
+
+/* Posiciones y delays diferentes para cada icono */
+.icono-1  { left: 5%;  top: 10%; animation-delay: 0s;   animation-duration: 12s; }
+.icono-2  { left: 15%; top: 30%; animation-delay: 1.5s; animation-duration: 10s; }
+.icono-3  { left: 25%; top: 60%; animation-delay: 3s;   animation-duration: 14s; }
+.icono-4  { left: 35%; top: 20%; animation-delay: 0.5s; animation-duration: 11s; }
+.icono-5  { left: 45%; top: 70%; animation-delay: 2s;   animation-duration: 13s; }
+.icono-6  { left: 55%; top: 40%; animation-delay: 4s;   animation-duration: 10s; }
+.icono-7  { left: 65%; top: 80%; animation-delay: 1s;   animation-duration: 15s; }
+.icono-8  { left: 75%; top: 15%; animation-delay: 2.5s; animation-duration: 12s; }
+.icono-9  { left: 85%; top: 50%; animation-delay: 3.5s; animation-duration: 11s; }
+.icono-10 { left: 92%; top: 75%; animation-delay: 0.8s; animation-duration: 13s; }
+.icono-11 { left: 10%; top: 45%; animation-delay: 1.2s; animation-duration: 13s; }
+.icono-12 { left: 30%; top: 85%; animation-delay: 2.8s; animation-duration: 11s; }
+.icono-13 { left: 50%; top: 25%; animation-delay: 0.3s; animation-duration: 14s; }
+.icono-14 { left: 70%; top: 65%; animation-delay: 3.8s; animation-duration: 12s; }
+.icono-15 { left: 88%; top: 35%; animation-delay: 1.8s; animation-duration: 10s; }
+
+.fondo-animado__contenido {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .fondo-animado__icono {
+        width: 2.6rem;
+        height: 2.6rem;
+        opacity: 0.3;
+    }
+
+    .fondo-animado__icono svg {
+        width: 1.55rem;
+        height: 1.55rem;
+    }
+}

@@ -1,0 +1,79 @@
+.contacto-seccion {
+    padding: 2rem 0 3rem;
+    background-color: transparent;
+}
+
+/* Separador decorativo */
+.contacto-separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+.contacto-separador__texto {
+    font-size: 1rem;
+    color: var(--color-primario);
+    white-space: nowrap;
+    font-family: var(--fuente-acentos);
+    font-size: 1.5rem;
+}
+
+.contacto-separador__linea {
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-primario);
+    max-width: 200px;
+}
+
+/* Card */
+.contacto-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(44, 7, 3, 0.1);
+
+}
+
+.contacto-card__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    color: var(--color-oscuro);
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+
+.contacto-card__numero {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-oscuro);
+}
+
+.contacto-card__telefono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.contacto-card__icono {
+    font-size: 1.2rem;
+    color: var(--color-primario);
+}
+
+.contacto-card__telefono span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-oscuro);
+}
+
+.contacto-card__mensaje {
+    font-size: 0.9rem;
+    color: var(--color-medio);
+    margin: 0;
+}

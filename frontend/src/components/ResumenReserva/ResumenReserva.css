@@ -1,0 +1,139 @@
+.resumen-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 7, 3, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.resumen-modal {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(44, 7, 3, 0.3);
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado */
+.resumen-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.resumen-header__icono {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 0.8rem;
+}
+
+.resumen-header__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    color: var(--color-oscuro);
+    margin-bottom: 0.3rem;
+}
+
+.resumen-header__subtitulo {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Datos */
+.resumen-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.resumen-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    background: var(--color-fondo);
+    border-radius: 8px;
+    border-left: 3px solid var(--color-primario);
+}
+
+.resumen-item__icono {
+    color: var(--color-primario);
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.resumen-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumen-item__label {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+}
+
+.resumen-item__valor {
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+    font-weight: 500;
+}
+
+/* Botones */
+.resumen-botones {
+    display: flex;
+    gap: 1rem;
+}
+
+.resumen-botones__editar,
+.resumen-botones__confirmar {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.resumen-botones__editar {
+    background: transparent;
+    border: 2px solid var(--color-oscuro);
+    color: var(--color-oscuro);
+}
+
+.resumen-botones__editar:hover {
+    background: var(--color-oscuro);
+    color: var(--color-marfil);
+    transform: translateY(-2px);
+}
+
+.resumen-botones__confirmar {
+    background: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    color: var(--color-marfil);
+    box-shadow: 0 4px 15px rgba(137, 6, 32, 0.3);
+}
+
+.resumen-botones__confirmar:hover {
+    background: var(--color-medio);
+    border-color: var(--color-medio);
+    transform: translateY(-2px);
+}
